@@ -21,11 +21,6 @@ public class OffersDAO {
 
 	private NamedParameterJdbcTemplate jdbc;
 
-	public OffersDAO() {
-		System.out.println("Succssesfuly loaded from DAO.");
-	}
-	
-	
 	@Autowired
 	public void setDataSource(DataSource jdbc) {
 		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
@@ -52,12 +47,13 @@ public class OffersDAO {
 		});
 
 	}
+
 	@Transactional
-	public int [] createBatch(List<Offer> offers) {
-		
-		SqlParameterSource [] params =  SqlParameterSourceUtils.createBatch(offers.toArray());
+	public int[] createBatch(List<Offer> offers) {
+
+		SqlParameterSource[] params = SqlParameterSourceUtils.createBatch(offers.toArray());
 		return jdbc.batchUpdate("insert into offers (name, text, email) values (:name, :text, :email)", params);
-		
+
 	}
 
 	public boolean create(Offer offer) {
@@ -70,12 +66,11 @@ public class OffersDAO {
 		MapSqlParameterSource parameters = new MapSqlParameterSource("id", id);
 		return (int) jdbc.update("delete from offers where id = :id", parameters) == 1;
 	}
-	
+
 	public boolean update(Offer offer) {
 		BeanPropertySqlParameterSource parms = new BeanPropertySqlParameterSource(offer);
 		return jdbc.update("update offers set name = :name, text = :text, email = :email where id = :id", parms) == 1;
-		
-		
+
 	}
 
 }
