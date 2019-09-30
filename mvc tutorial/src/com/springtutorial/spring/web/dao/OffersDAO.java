@@ -26,7 +26,7 @@ public class OffersDAO {
 	}
 	
 	
-	//@Autowired
+	@Autowired
 	public void setDataSource(DataSource jdbc) {
 		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
 	}
