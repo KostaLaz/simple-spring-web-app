@@ -32,8 +32,8 @@ public class OffersController {
 		
 	}
 	
-	@RequestMapping("/offers")
-	public String createOffers(Model model) {
+	@RequestMapping("/createoffer")
+	public String createOffers() {
 		
 		
 		return "createoffer";

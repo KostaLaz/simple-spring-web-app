@@ -12,7 +12,9 @@
 
 
 	<c:forEach var="offer" items="${offers}">
-  <p> <c:out value="offer"></c:out></p>
+		<p>
+			<c:out value="${offer}"></c:out>
+		</p>
 
 	</c:forEach>
 
