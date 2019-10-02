@@ -32,11 +32,26 @@ public class OffersController {
 		
 	}
 	
+	@RequestMapping("/test")
+	public String showTest(Model model) {
+		
+	
+		return "home";
+	}
+	
 	@RequestMapping("/createoffer")
 	public String createOffers() {
 		
 		
 		return "createoffer";
+		
+	}
+	
+	@RequestMapping("/docreate")
+	public String doCreate() {
+		
+		
+		return "offercreated";
 		
 	}
 
