@@ -14,46 +14,42 @@ import com.springtutorial.spring.web.service.OffersService;
 public class OffersController {
 
 	private OffersService offersService;
-	
+
 	@Autowired
 	public void setOffersService(OffersService offersService) {
 		this.offersService = offersService;
 	}
 
-
 	@RequestMapping("/offers")
 	public String showOffers(Model model) {
-		
+
 		List<Offer> offers = offersService.getCurrent();
-		
+
 		model.addAttribute("offers", offers);
-		
+
 		return "offers";
-		
-	}
-	
-	@RequestMapping("/test")
-	public String showTest(Model model) {
-		
-	
-		return "home";
-	}
-	
-	@RequestMapping("/createoffer")
-	public String createOffers() {
-		
-		
-		return "createoffer";
-		
-	}
-	
-	@RequestMapping("/docreate")
-	public String doCreate() {
-		
-		
-		return "offercreated";
-		
+
 	}
 
+	@RequestMapping("/test")
+	public String showTest(Model model) {
+
+		return "home";
+	}
+
+	@RequestMapping("/createoffer")
+	public String createOffers() {
+
+		return "createoffer";
+
+	}
+
+	@RequestMapping("/docreate")
+	public String doCreate(Model model, Offer offer) {
+
+		System.out.println(offer);
+		return "offercreated";
+
+	}
 
 }
