@@ -3,6 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+
+.form {
+padding: 10px;
+border: 1px solid blue;
+}
+
+</style>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -12,7 +20,7 @@
 
 <form method="post" action="${pageContext.request.contextPath }/docreate">
 
-<table>
+<table class="form">
 
 <tr><td>Name:</td><td><input name="name" type="text"/></td></tr>
 <tr><td>Email:</td><td><input name="email" type="text"/></td></tr>
