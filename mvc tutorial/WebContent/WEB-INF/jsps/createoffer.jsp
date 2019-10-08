@@ -6,8 +6,23 @@
 <style type="text/css">
 
 .form {
+width 400px;
 padding: 10px;
 border: 1px solid blue;
+}
+
+input[type=text]{
+width: 200px;
+}
+
+textarea {
+	width: 200px;
+	height: 250px;
+}
+
+.label {
+text-align: right;
+vertical-align: top;
 }
 
 </style>
@@ -22,9 +37,9 @@ border: 1px solid blue;
 
 <table class="form">
 
-<tr><td>Name:</td><td><input name="name" type="text"/></td></tr>
-<tr><td>Email:</td><td><input name="email" type="text"/></td></tr>
-<tr><td>Your offer:</td><td><textarea name="text" rows="10" cols="10"></textarea></td></tr>
+<tr><td class="label">Name:</td><td><input name="name" type="text"/></td></tr>
+<tr><td class="label">Email:</td><td><input name="email" type="text"/></td></tr>
+<tr><td class="label">Your offer:</td><td><textarea name="text" rows="10" cols="10"></textarea></td></tr>
 <tr><td></td><td><input value="Create advert" type="submit"/></td></tr>
 
 </table>
