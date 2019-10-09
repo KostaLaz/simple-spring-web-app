@@ -3,29 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-
-.form {
-width 400px;
-padding: 10px;
-border: 1px solid blue;
-}
-
-input[type=text]{
-width: 200px;
-}
-
-textarea {
-	width: 200px;
-	height: 250px;
-}
-
-.label {
-text-align: right;
-vertical-align: top;
-}
-
-</style>
+<link href="${page.Context.request.contextPath }/resources/css/main.css" rel="stylesheet" type="text/css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -35,7 +13,7 @@ vertical-align: top;
 
 <form method="post" action="${pageContext.request.contextPath }/docreate">
 
-<table class="form">
+<table class="formidable">
 
 <tr><td class="label">Name:</td><td><input name="name" type="text"/></td></tr>
 <tr><td class="label">Email:</td><td><input name="email" type="text"/></td></tr>
