@@ -24,3 +24,9 @@ input[type-text]{
 .control {
 	margin: 10px;
 }
+
+.error{
+	font-size: small;
+	color: red;
+	margin: 10px;
+}
