@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form:form method="post" action="${pageContext.request.contextPath }/docreate" commandName="offer">
+<form:form method="post" action="${pageContext.request.contextPath }/docreate" modelAttribute="offer">
 
 <table class="formtable">
 
