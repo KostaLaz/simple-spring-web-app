@@ -16,9 +16,9 @@
 
 <table class="formtable">
 
-<tr><td class="label">Name:</td><td><form:input path="name" name="name" type="text"/></td></tr>
-<tr><td class="label">Email:</td><td><form:input path="email" name="email" type="text"/></td></tr>
-<tr><td class="label">Your offer:</td><td><form:textarea path="text" name="text" rows="10" cols="10"></form:textarea></td></tr>
+<tr><td class="label">Name:</td><td><form:input path="name" name="name" type="text"/><br/><form:errors path="name" cssClass="error"></form:errors></td></tr>
+<tr><td class="label">Email:</td><td><form:input path="email" name="email" type="text"/><br/><form:errors path="email" cssClass="error"></form:errors></td></tr>
+<tr><td class="label">Your offer:</td><td><form:textarea path="text" name="text" rows="10" cols="10"></form:textarea><br/><form:errors path="text" cssClass="error"></form:errors></td></tr>
 <tr><td></td><td><input value="Create advert" type="submit"/></td></tr>
 
 </table>
