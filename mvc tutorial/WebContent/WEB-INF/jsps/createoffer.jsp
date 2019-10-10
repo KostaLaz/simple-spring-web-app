@@ -12,18 +12,18 @@
 </head>
 <body>
 
-<form method="post" action="${pageContext.request.contextPath }/docreate">
+<form:form method="post" action="${pageContext.request.contextPath }/docreate" commandName="offer">
 
 <table class="formtable">
 
-<tr><td class="label">Name:</td><td><input name="name" type="text"/></td></tr>
-<tr><td class="label">Email:</td><td><input name="email" type="text"/></td></tr>
-<tr><td class="label">Your offer:</td><td><textarea name="text" rows="10" cols="10"></textarea></td></tr>
+<tr><td class="label">Name:</td><td><form:input path="name" name="name" type="text"/></td></tr>
+<tr><td class="label">Email:</td><td><form:input path="email" name="email" type="text"/></td></tr>
+<tr><td class="label">Your offer:</td><td><form:textarea path="text" name="text" rows="10" cols="10"></form:textarea></td></tr>
 <tr><td></td><td><input value="Create advert" type="submit"/></td></tr>
 
 </table>
 
-</form>
+</form:form>
 
 </body>
 </html>
