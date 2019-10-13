@@ -22,7 +22,7 @@ import javax.validation.constraints.Size.List;
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, TYPE_USE })
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = { })
+@Constraint(validatedBy = {com.springtutorial.spring.web.validation.ValidEmailImplementation.class })
 public @interface ValidEmail {
 
 	String message() default "This does not appear to be a valid email adress.";
