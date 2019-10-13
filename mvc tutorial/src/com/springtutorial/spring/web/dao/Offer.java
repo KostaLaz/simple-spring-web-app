@@ -1,8 +1,10 @@
 package com.springtutorial.spring.web.dao;
 
 import javax.validation.constraints.Pattern;
+
 import javax.validation.constraints.Size;
 
+import com.springtutorial.spring.web.validation.ValidEmail;
 import com.sun.istack.NotNull;
 
 public class Offer {
