@@ -8,7 +8,7 @@
 </head>
 <body>
 
-Offer created
+Offer created: <a href="${pageContext.request.contextPath }/offers">Click here to view offers.</a>
 
 </body>
 </html>
