@@ -86,6 +86,14 @@
     <version>6.0.17.Final</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+<dependency>
+    <groupId>commons-validator</groupId>
+    <artifactId>commons-validator</artifactId>
+    <version>1.6</version>
+</dependency>
+
+
 
   
    

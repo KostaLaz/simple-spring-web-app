@@ -16,8 +16,8 @@ public class Offer {
 	private String name;
 	@NotNull
 	//@Pattern(regexp = ".*\\@.*\\..*", message = "This is not a valid email adress")
-	@ValidEmail
-	private String emial;
+	@ValidEmail(min = 6, message = "This email adress is not valid")
+	private String email;
 	@Size(min = 20, max = 100,  message = "Text must be between 20 and 100 characters.")
 	private String text;
 
@@ -27,14 +27,14 @@ public class Offer {
 
 	public Offer(String name, String emial, String text) {
 		this.name = name;
-		this.emial = emial;
+		this.email = emial;
 		this.text = text;
 	}
 
 	public Offer(int id, String name, String emial, String text) {
 		this.id = id;
 		this.name = name;
-		this.emial = emial;
+		this.email = emial;
 		this.text = text;
 	}
 
@@ -55,11 +55,11 @@ public class Offer {
 	}
 
 	public String getEmail() {
-		return emial;
+		return email;
 	}
 
-	public void setEmail(String emial) {
-		this.emial = emial;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getText() {
@@ -72,7 +72,7 @@ public class Offer {
 
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", name=" + name + ", emial=" + emial + ", text=" + text + "]";
+		return "Offer [id=" + id + ", name=" + name + ", email=" + email + ", text=" + text + "]";
 	}
 
 }
