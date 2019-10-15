@@ -33,7 +33,7 @@ public class OffersService {
 	}
 
 	public void throwTestExeption() {
-		offersDao.getOffer(142);
+		offersDao.getOffer(145);
 		
 	}
 }
