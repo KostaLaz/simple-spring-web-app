@@ -2,6 +2,7 @@ package com.springtutorial.spring.web.dao;
 
 import javax.validation.constraints.Pattern;
 
+
 import javax.validation.constraints.Size;
 
 import com.springtutorial.spring.web.validation.ValidEmail;
@@ -25,16 +26,16 @@ public class Offer {
 
 	}
 
-	public Offer(String name, String emial, String text) {
+	public Offer(String name, String email, String text) {
 		this.name = name;
-		this.email = emial;
+		this.email = email;
 		this.text = text;
 	}
 
-	public Offer(int id, String name, String emial, String text) {
+	public Offer(int id, String name, String email, String text) {
 		this.id = id;
 		this.name = name;
-		this.email = emial;
+		this.email = email;
 		this.text = text;
 	}
 

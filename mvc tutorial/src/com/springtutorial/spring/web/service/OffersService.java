@@ -19,7 +19,7 @@ public class OffersService {
 	
 	public List<Offer> getCurrent(){
 		
-		return offersDao.getOfers();
+		return offersDao.getOffers();
 	}
 
 	@Autowired
@@ -30,5 +30,10 @@ public class OffersService {
 	public void create(@Valid Offer offer) {
 
 		offersDao.create(offer);
+	}
+
+	public void throwTestExeption() {
+		offersDao.getOffer(142);
+		
 	}
 }

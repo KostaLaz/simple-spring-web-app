@@ -31,7 +31,7 @@ input[type-text]{
 	margin: 10px;
 }
 
-.offer-table{
+table.offers{
 	padding: 10px;
 	border: 1px solid gray;
 	

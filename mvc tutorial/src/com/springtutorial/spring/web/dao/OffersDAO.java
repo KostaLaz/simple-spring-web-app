@@ -26,7 +26,7 @@ public class OffersDAO {
 		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
 	}
 
-	public List<Offer> getOfers() {
+	public List<Offer> getOffers() {
 
 		MapSqlParameterSource params = new MapSqlParameterSource("name", "name");
 
@@ -71,6 +71,12 @@ public class OffersDAO {
 		BeanPropertySqlParameterSource parms = new BeanPropertySqlParameterSource(offer);
 		return jdbc.update("update offers set name = :name, text = :text, email = :email where id = :id", parms) == 1;
 
+	}
+	
+	public boolean getOffer(int id) {
+		
+		MapSqlParameterSource parameters = new MapSqlParameterSource("id", id);
+		return (int) jdbc.update("select from offers where id = :id", parameters) == 1;
 	}
 
 }
