@@ -40,17 +40,19 @@ public class OffersController {
 
 	}
 	
-	@ExceptionHandler(DataAccessException.class)
+	
+	/*@ExceptionHandler(DataAccessException.class)
 	public String handleDataBaseExeption(DataAccessException ex) {
 		
 		return "error";
 	}
-
+	*/
 	@RequestMapping("/test")
 	public String showTest(Model model) {
 
 		return "home";
 	}
+	
 
 	@RequestMapping("/createoffer")
 	public String createOffers(Model model) {
