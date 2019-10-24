@@ -22,6 +22,7 @@
 	</security:authentication-manager>
 	
 	<security:http use-expressions="true">
-		<security:intercept-url pattern="/**" />
+		<security:intercept-url pattern="/**" access="denyAll" />
+		<security:form-login />
 	</security:http>
 </beans>
