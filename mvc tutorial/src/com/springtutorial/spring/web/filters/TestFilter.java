@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Servlet Filter implementation class TestFilter
@@ -36,6 +37,8 @@ public class TestFilter implements Filter {
 		// TODO Auto-generated method stub
 		// place your code here
 
+		System.out.println(((HttpServletRequest)request).getRequestURI());
+		
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}
