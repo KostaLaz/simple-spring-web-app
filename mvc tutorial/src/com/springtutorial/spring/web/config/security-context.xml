@@ -15,7 +15,13 @@
 			<security:user-service>
 				<security:user name="Kosta" authorities="admin"
 					password="password" />
+					<security:user name="Zeus" authorities="admin"
+					password="password1" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
+	
+	<security:http use-expressions="true">
+		<security:intercept-url />
+	</security:http>
 </beans>
