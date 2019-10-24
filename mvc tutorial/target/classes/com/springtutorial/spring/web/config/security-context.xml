@@ -14,14 +14,15 @@
 		<security:authentication-provider>
 			<security:user-service>
 				<security:user name="Kosta" authorities="admin"
-					password="password" />
+					password="{noop}password" />
 				<security:user name="Zeus" authorities="admin"
-					password="password1" />
+					password="{noop}password1" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
 
 	<security:http use-expressions="true">
+	<security:intercept-url pattern="/createoffer" access="isAuthenticated()" />
 		<security:intercept-url pattern="/" access="permitAll" />
 			<security:intercept-url pattern="/offers" access="permitAll" />
 		<security:intercept-url pattern="/**" access="denyAll" />
