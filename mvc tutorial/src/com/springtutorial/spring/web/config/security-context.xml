@@ -22,6 +22,6 @@
 	</security:authentication-manager>
 	
 	<security:http use-expressions="true">
-		<security:intercept-url />
+		<security:intercept-url pattern="/**" />
 	</security:http>
 </beans>
