@@ -16,7 +16,7 @@
 
  <body>
      <div class="container">
-      <form class="form-signin" method="post" action="${pageContext.request.contextPath }/offers/login">
+      <form class="form-signin" method="post" action="${pageContext.request.contextPath }/login">
         <h2 class="form-signin-heading">Please sign in</h2>
         <p>
           <label for="username" class="sr-only">Username</label>
