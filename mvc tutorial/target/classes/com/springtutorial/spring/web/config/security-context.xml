@@ -29,7 +29,11 @@
 		<security:intercept-url pattern="/resources/**" access="permitAll" />
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/offers" access="permitAll" />
+		<security:form-login login-page="/login"
+			authentication-failure-url="/login?error"
+			default-target-url="/createoffer" />
+
 		<security:intercept-url pattern="/**" access="denyAll" />
-		<security:form-login/>
+		
 	</security:http>
 </beans>

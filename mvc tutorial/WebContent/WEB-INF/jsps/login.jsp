@@ -14,7 +14,9 @@
 </head>
 <body>
 
- <body>
+CUSTOM LOGIN PAGE
+
+ 
      <div class="container">
       <form class="form-signin" method="post" action="${pageContext.request.contextPath }/login">
         <h2 class="form-signin-heading">Please sign in</h2>

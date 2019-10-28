@@ -35,7 +35,7 @@
     <param-value>
 	classpath:com/springtutorial/spring/web/config/dao-context.xml
 	classpath:com/springtutorial/spring/web/config/service-context.xml
-		classpath:com/springtutorial/spring/web/config/security-context.xml
+	classpath:com/springtutorial/spring/web/config/security-context.xml
 	
 	</param-value>
   </context-param>
