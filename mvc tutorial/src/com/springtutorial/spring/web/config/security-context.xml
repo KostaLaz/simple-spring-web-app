@@ -13,14 +13,15 @@
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
-				<security:user name="Kosta" authorities="admin"
+				<security:user name="testuser" authorities="admin"
 					password="{noop}password" />
-				<security:user name="Zeus" authorities="admin"
+				<security:user name="testuser2" authorities="admin"
 					password="{noop}password1" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
 
+	
 	<security:http use-expressions="true">
 		<security:intercept-url pattern="/createoffer" access="isAuthenticated()" />
 		<security:intercept-url pattern="/docreate" access="isAuthenticated()" />
@@ -29,9 +30,7 @@
 		<security:intercept-url pattern="/resources/**" access="permitAll" />
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/offers" access="permitAll" />
-		<security:form-login login-page="/login"
-			authentication-failure-url="/login?error"
-			default-target-url="/createoffer" />
+		<security:form-login always-use-default-target="true" />
 
 		<security:intercept-url pattern="/**" access="denyAll" />
 		

@@ -1,36 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
 <html>
 <head>
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Please sign in</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+<title>Login Page</title>
+
+<link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
+
 
 </head>
-<body>
-
-CUSTOM LOGIN PAGE
-
- 
-     <div class="container">
-      <form class="form-signin" method="post" action="${pageContext.request.contextPath }/login">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <p>
-          <label for="username" class="sr-only">Username</label>
-          <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
-        </p>
-        <p>
-          <label for="password" class="sr-only">Password</label>
-          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-        </p>
-<input name="_csrf" type="hidden" value="f135174a-8b4a-46bf-9304-85df6edd1274" />
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-</div>
+<body onload='document.f.j_username.focus();'>
+	<h3>Login with Username and Password</h3>
+	<form name='f' action='${pageContext.request.contextPath}/j_spring_security_check' method='POST'>
+		<table class="formtable">
+			<tr>
+				<td>User:</td>
+				<td><input type='text' name='j_username' value=''></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type='password' name='j_password' /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input name="submit" type="submit"
+					value="Login" /></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
