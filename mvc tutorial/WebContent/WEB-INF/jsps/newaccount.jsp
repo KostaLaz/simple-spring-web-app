@@ -7,11 +7,11 @@
 <html>
 <head>
  <link href="${pageContext.request.contextPath }/resources/css/main.css" rel="stylesheet" type="text/css"/>
-<title>Insert title here</title>
+<title>Create account</title>
 </head>
 <body>
 <div class="formtable">
-<form:form method="post" action="${pageContext.request.contextPath }/docreate" modelAttribute="offer">
+<form:form method="post" action="${pageContext.request.contextPath }/createaccount" commandName="user">
 
 <table class="formtable">
 
