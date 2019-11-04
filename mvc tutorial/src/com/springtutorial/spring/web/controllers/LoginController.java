@@ -1,15 +1,25 @@
 package com.springtutorial.spring.web.controllers;
 
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.springtutorial.spring.web.dao.User;
+import com.springtutorial.spring.web.service.UsersService;
 
 @Controller
 public class LoginController {
+	
+	private UsersService usersService;
+	
+   @Autowired
+	public void setUsersService(UsersService usersService) {
+		this.usersService = usersService;
+	}
 
 	@RequestMapping("/login")
 	public String showLogin(Model model) {
@@ -25,11 +35,20 @@ public class LoginController {
 		return "newaccount";
 	}
 	
+	
 	@RequestMapping("/createaccount")
-	public String createAccount(Model model) {
+	public String createAccount(@Valid User user, BindingResult result) {
 
+		if (result.hasErrors()) {
+			
+			return "createaccount";
+			
+		} 
+		
+		usersService.create(user);
 		
 		return "accountcreated";
+
 	}
 	
 
