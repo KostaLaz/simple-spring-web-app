@@ -19,7 +19,7 @@ public class User {
 	@Size(min= 8, max= 20, message = "Password must be between 8 and 20 characters.")
 	@Pattern(regexp = "^\\S+$")
 	private String password;
-	@ValidEmail
+	@ValidEmail(message = "Invalid emal.")
 	private String email;
 	private boolean enabled = false;
 	private String authority;
