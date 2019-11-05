@@ -1,7 +1,12 @@
 package com.springtutorial.spring.web.dao;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class User {
 
+	@NotBlank
+	@Size(min= 8, max= 15)
 	private String username;
 	private String password;
 	private String email;
