@@ -11,6 +11,7 @@ public class DatabaseErrorHandler {
 	@ExceptionHandler(DataAccessException.class)
 	public String handleDataBaseExeption(DataAccessException ex) {
 		
+		ex.printStackTrace();
 		return "error";
 	}
 

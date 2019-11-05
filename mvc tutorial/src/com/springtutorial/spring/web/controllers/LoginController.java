@@ -45,6 +45,10 @@ public class LoginController {
 			
 		} 
 		
+		user.setEnabled(true);
+		
+		user.setAuthority("admin");
+		
 		usersService.create(user);
 		
 		return "accountcreated";
