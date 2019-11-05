@@ -32,7 +32,7 @@ public class UsersDAO {
 
 	public boolean exists(String username) {
 		
-		return jdbc.queryForObject("select count * from users where username = :username", 
+		return jdbc.queryForObject("select count(*) from users where username=:username", 
 				new MapSqlParameterSource("username", username), Integer.class) > 0;
 	}
 
