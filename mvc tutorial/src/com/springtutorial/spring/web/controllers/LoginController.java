@@ -41,7 +41,7 @@ public class LoginController {
 
 		if (result.hasErrors()) {
 			
-			return "createaccount";
+			return "newaccount";
 			
 		} 
 		
