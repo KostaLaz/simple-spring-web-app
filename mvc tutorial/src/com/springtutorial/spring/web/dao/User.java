@@ -1,12 +1,14 @@
 package com.springtutorial.spring.web.dao;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class User {
 
 	@NotBlank
-	@Size(min= 8, max= 15)
+	@Size(min= 8, max= 15, message = "Usename must be between 8 and 15 characters.")
+	@Pattern(regexp = "^\\w{8, }$")
 	private String username;
 	private String password;
 	private String email;
