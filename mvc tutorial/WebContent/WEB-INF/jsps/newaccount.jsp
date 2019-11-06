@@ -7,6 +7,7 @@
 <html>
 <head>
  <link href="${pageContext.request.contextPath }/resources/css/main.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="${pageContext.request.contextPath }/resources/script/jquery.js"></script>
 <title>Create new account</title>
 </head>
 <body>
