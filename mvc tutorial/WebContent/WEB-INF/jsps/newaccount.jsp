@@ -24,6 +24,7 @@
 		var confirmpassword = $("#confirmpassword").val();
 		
 		if(password != confirmpassword){
+			alert("Passwords do not match!")
 			return false;
 		} else{
 				return true;
