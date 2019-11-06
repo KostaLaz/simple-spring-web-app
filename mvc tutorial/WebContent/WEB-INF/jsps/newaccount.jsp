@@ -15,6 +15,13 @@
 	function onLoad() {
 		$("#password").keyup(checkPasswordsMatch);
 		$("#confirmpassword").keyup(checkPasswordsMatch);
+		
+		$("#details").submit(canSubmit);
+	}
+	
+	function canSubmit(){
+		
+		
 	}
 
 	function checkPasswordsMatch() {
@@ -43,7 +50,7 @@
 </head>
 <body>
 	<div class="formtable">
-		<form:form method="post"
+		<form:form id="details" method="post"
 			action="${pageContext.request.contextPath }/createaccount"
 			modelAttribute="user">
 
@@ -52,7 +59,7 @@
 				<tr>
 					<td class="label">Userame:</td>
 					<td><form:input path="username" name="username" type="text" /><br />
-						<div cssClass="error">
+						<div class="error">
 							<form:errors path="username">
 							</form:errors>
 						</div></td>
@@ -60,7 +67,7 @@
 				<tr>
 					<td class="label">Email:</td>
 					<td><form:input path="email" name="email" type="text" /><br />
-						<div cssClass="error"></div> <form:errors path="email">
+						<div class="error"></div> <form:errors path="email">
 							</div>
 						</form:errors></td>
 				</tr>
@@ -68,7 +75,7 @@
 					<td class="label">Password:</td>
 					<td><form:input id="password" path="password" name="password"
 							type="text" /><br />
-						<div cssClass="error">
+						<div class="error">
 							<form:errors path="password"></form:errors>
 						</div></td>
 				</tr>
