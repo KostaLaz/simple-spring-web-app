@@ -20,7 +20,14 @@
 	}
 	
 	function canSubmit(){
+		var password = $("#password").val();
+		var confirmpassword = $("#confirmpassword").val();
 		
+		if(password != confirmpassword){
+			return false;
+		} else{
+				return true;
+		}
 		
 	}
 
