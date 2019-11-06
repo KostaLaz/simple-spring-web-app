@@ -25,8 +25,11 @@
 
 			if (password == confirmpassword) {
 				$("#matchpass").text("Passwords match.");
+				$("#matchpass").addClass("valid");
+				$("#matchpass").removeClass("error");
 			} else {
 				$("#matchpass").text("Passwords do not match.");
+				$("#matchpass").addClass("error");
 			}
 		}
 	}
