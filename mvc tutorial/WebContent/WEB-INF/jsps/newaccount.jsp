@@ -12,14 +12,15 @@
 <script type="text/javascript">
 
 function onLoad() {
-	$("#password").keyUp(checkPasswordsMatch);
-	$("#confirmpassword").keyUp(checkPasswordsMatch);
+	$("#password").keyup(checkPasswordsMatch);
+	$("#confirmpassword").keyup(checkPasswordsMatch);
 }
 
 function checkPasswordsMatch(){
 	var password = $("#password").val();
 	var confirmpassword = $("#confirmpassword").val();
 	
+	alert(password + ":" + confirmpassword);
 }
 
 $(document).ready(onLoad);
