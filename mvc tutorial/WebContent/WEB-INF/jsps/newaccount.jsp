@@ -30,6 +30,7 @@
 			} else {
 				$("#matchpass").text("Passwords do not match.");
 				$("#matchpass").addClass("error");
+				$("#matchpass").removeClass("valid");
 			}
 		}
 	}
