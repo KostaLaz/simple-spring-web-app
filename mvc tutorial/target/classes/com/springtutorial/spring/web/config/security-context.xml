@@ -38,7 +38,8 @@
 		<security:intercept-url pattern="/offers" access="permitAll" />
 		<security:intercept-url pattern="/**" access="denyAll" />
 		<security:form-login/>
-		<security:logout logout-success-url="/loggedout" />
+		
+		<security:logout  logout-success-url="/loggedout" />
 		</security:http>
 </beans>
 
