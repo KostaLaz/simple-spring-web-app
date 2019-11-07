@@ -15,5 +15,10 @@
 <p><a href="${pageContext.request.contextPath }/createoffer">Create new offer</a></p>
 <p><a href="${pageContext.request.contextPath }/newaccount">Create new account</a></p>
 
+
+
+<p><a href="<c:url value='/j_spring_security_logout'></c:url>">Logg out</a></p>
+
+
 </body>
 </html>
