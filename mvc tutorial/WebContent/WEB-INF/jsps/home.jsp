@@ -14,10 +14,11 @@
 <p><a href="${pageContext.request.contextPath }/offers">Show current offers</a></p>
 <p><a href="${pageContext.request.contextPath }/createoffer">Create new offer</a></p>
 <p><a href="${pageContext.request.contextPath }/newaccount">Create new account</a></p>
+<p><a href="${pageContext.request.contextPath }/admin">Admin</a></p>
 
 
 
-<p><a href="${pageContext.request.contextPath }/logout">Logg out</a></p>
+<p><a href="${pageContext.request.contextPath }/logout">Log out</a></p>
 
 
 </body>
