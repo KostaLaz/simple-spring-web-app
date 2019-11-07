@@ -40,11 +40,11 @@
 		if (password.length > 3 || confirmpassword.length > 3) {
 
 			if (password == confirmpassword) {
-				$("#matchpass").text("Passwords match.");
+				$("#matchpass").text("<fmt:message key='MatchedPassword.user.password'/>");
 				$("#matchpass").addClass("valid");
 				$("#matchpass").removeClass("error");
 			} else {
-				$("#matchpass").text("Passwords do not match.");
+				$("#matchpass").text("<fmt:message key='UnmatchedPassword.user.password'/>");
 				$("#matchpass").addClass("error");
 				$("#matchpass").removeClass("valid");
 			}
@@ -54,8 +54,6 @@
 	$(document).ready(onLoad);
 </script>
 
-<fmt:message key="UnmatchedPassword.user.password"/>
-<fmt:message key="MatchedPassword.user.password"/>
 
 <title>Create new account</title>
 </head>
