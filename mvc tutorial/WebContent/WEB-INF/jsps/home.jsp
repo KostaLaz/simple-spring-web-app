@@ -18,6 +18,12 @@
 <p><a href="${pageContext.request.contextPath }/newaccount">Create new account</a></p>
 
 
+
+<sec:authorize access="isAuthenticated()">
+<p><a href="${pageContext.request.contextPath }/login">Log in</a></p>
+</sec:authorize>
+
+
 <sec:authorize access="hasRole(admin)">
 <p><a href="${pageContext.request.contextPath }/admin">Admin</a></p>
 </sec:authorize>

@@ -1,9 +1,11 @@
 package com.springtutorial.spring.web.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +30,16 @@ public class LoginController {
 
 		
 		return "login";
+	}
+	
+	@RequestMapping("/admin")
+	public String showAdmin(Model model) {
+
+		List<User> users = usersService.getAllUsers();
+		
+		
+		return "admin";
+
 	}
 	
 	@RequestMapping("/loggedout")
