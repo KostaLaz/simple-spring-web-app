@@ -36,7 +36,7 @@ public class LoginController {
 	public String showAdmin(Model model) {
 
 		List<User> users = usersService.getAllUsers();
-		
+		model.addAttribute("users", users );
 		
 		return "admin";
 
