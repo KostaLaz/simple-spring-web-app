@@ -15,7 +15,16 @@
 </head>
 <body>
 	<table class="formtable">
-	<tr><td>Username</td><td>Email</td><td>Role</td><td>Enabled</td></tr>
+	<tr><td>Username</td><td>Email</td><td>Authority</td><td>Enabled</td></tr>
+
+    <c:forEach var="user" items="${users}">
+    
+    	<tr><td><c:out value="${user.username }"></c:out></td></tr>
+    	<tr><td><c:out value="${user.email }"></c:out></td></tr>
+    	<tr><td><c:out value="${user.authority }"></c:out></td></tr>
+    	<tr><td><c:out value="${user.enabled }"></c:out></td></tr>
+    
+    </c:forEach>
 
 	</table>
 </body>
