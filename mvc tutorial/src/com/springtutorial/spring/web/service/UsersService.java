@@ -34,5 +34,9 @@ public class UsersService {
 		return usersDao.exists(username);
 	}
 
+	public List<User> getAllUsers() {
+		
+	}
+
 	
 }

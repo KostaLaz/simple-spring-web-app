@@ -19,7 +19,7 @@
 
 
 
-<sec:authorize access="isAuthenticated()">
+<sec:authorize access="!isAuthenticated()">
 <p><a href="${pageContext.request.contextPath }/login">Log in</a></p>
 </sec:authorize>
 
