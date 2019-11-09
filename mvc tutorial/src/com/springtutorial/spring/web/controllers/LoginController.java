@@ -79,7 +79,7 @@ public class LoginController {
 		
 		user.setEnabled(true);
 		
-		user.setAuthority("admin");
+		user.setAuthority("ROLE_USER");
 		
 		if(usersService.exists(user.getUsername())) {
 			System.out.println("Cought duplicate username");
