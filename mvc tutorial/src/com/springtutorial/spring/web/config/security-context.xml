@@ -44,6 +44,7 @@
 		<security:form-login />
 		
 		<security:logout  logout-success-url="/loggedout" />
+		<security:access-denied-handler error-page="/denied" />
 		</security:http>
 		<security:global-method-security
 			secured-annotations="enabled">
