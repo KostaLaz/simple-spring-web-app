@@ -1,16 +1,21 @@
 package com.springtutorial.spring.web.dao;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.springtutorial.spring.web.validation.ValidEmail;
 
 
 
+
+
 public class User {
 
+	private PasswordEncoder passwordEncoder;
+	
 	@NotBlank
 	@Size(min= 8, max= 15)
 	@Pattern(regexp = "^\\w{8,}$")
