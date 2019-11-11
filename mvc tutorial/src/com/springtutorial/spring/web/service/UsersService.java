@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
-import com.springtutorial.spring.web.dao.Offer;
-import com.springtutorial.spring.web.dao.OffersDAO;
 import com.springtutorial.spring.web.dao.User;
 import com.springtutorial.spring.web.dao.UsersDAO;
 
@@ -21,7 +19,7 @@ public class UsersService {
 	
 
 	@Autowired
-	public void setOffersDao(UsersDAO usersDao) {
+	public void setUsersDao(UsersDAO usersDao) {
 		this.usersDao = usersDao;
 	}
 

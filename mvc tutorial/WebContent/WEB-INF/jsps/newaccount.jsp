@@ -76,14 +76,14 @@
 				<tr>
 					<td class="label">Email:</td>
 					<td><form:input path="email" name="email" type="text" /><br />
-						<div class="error"></div> <form:errors path="email">
+						<div class="error"><form:errors path="email"></div>
 							</div>
 						</form:errors></td>
 				</tr>
 				<tr>
 					<td class="label">Password:</td>
 					<td><form:input id="password" path="password" name="password"
-							type="text" /><br />
+							type="password" /><br />
 						<div class="error">
 							<form:errors path="password"></form:errors>
 						</div></td>
@@ -91,7 +91,7 @@
 				<tr>
 					<td class="label">Confirm password:</td>
 					<td><input id="confirmpassword" name="confirmpassword"
-						type="text" />
+						type="password" />
 						<div id="matchpass"></div></td>
 				</tr>
 				<tr>
